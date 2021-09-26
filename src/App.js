@@ -1,15 +1,25 @@
 import './App.css';
+import React from 'react';
+import { connect } from 'react-redux';
 
-function App() {
+function Page(props) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-      </header>
+    <div>
+      Olá
     </div>
   );
 }
 
-export default App;
+const mapStateToProps = (state) =>{
+  return{
+    user: state.user
+  }
+}
+
+const mapDispatchToProps = (dispatch) =>{
+  return{
+
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Page);
